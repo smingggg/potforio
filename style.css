@@ -1,0 +1,1704 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: "Abril Fatface", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+/* font-family: "Jomolhari", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Playwrite+IT+Moderna:wght@100..400&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Anton SC", sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Anton SC", sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/********************로딩페이지********************/
+
+/* proloading시 scroll 움직이는 못하게 막기 */
+body.loading {
+    overflow: hidden;
+}
+/* preload */
+.progress{
+    position: fixed;
+    left: 0; top: 0;
+    height: 100%; width: 100%;
+    z-index: 200;
+    background-color: #000;
+    color: #fff; 
+    /* transition: 0.5s cubic-bezier(0.96, 0.21, 0.07, 1);;  */
+   
+}
+.progress .progress-bar{
+    border-top: 1px solid rgb(160,160,160);
+    position: absolute;
+    top: 50%; width: 0%;
+}
+.progress.progress-complete .progress-bar{
+    border-top-color: #fff;
+}
+.progress .progress-text{
+    position: absolute;
+    top: 47%; width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(160,160,160);
+}
+
+/* .preloader {
+	overflow: hidden !important;
+	position: fixed;
+	width:100%;
+	height:100%;
+  text-align:center;
+  vertical-align:middle;
+  background-color: #000;
+  z-index: 100;
+}
+
+.loding-animation{
+  text-decoration: none;
+  position: relative;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+	margin:0 auto;
+  text-align: center;
+  width: 50px;
+	height:50px;
+	font-size:30px;
+	text-align: center;
+	vertical-align: center;
+	color: #fff;
+  animation: loding 2s infinite ease-in;
+}
+@keyframes loding {
+  0% {
+	scale: 100%;
+  }
+	25% {
+		scale: 80%;
+  }
+	50% {
+		scale: 100%;
+  }
+	75% {
+		scale: 80%;
+  }
+	100% {
+		scale: 100%;
+  }
+}
+
+.expand {
+width: 100%;
+height: 1px;
+margin: 2px 0;
+background: #fff;
+position: absolute;
+left:0px;
+top:55%;
+box-shadow: 0px 0px 10px 1px rgba(255,255,255,0.7);
+-moz-animation: nameThis 3s ease-out;
+-webkit-animation: nameThis 3s ease-out;
+}
+
+@-moz-keyframes nameThis {
+      0% { width: 0px;
+      }
+      100% { width: 100%;
+      }
+}
+@-webkit-keyframes nameThis {
+      0% { width: 0px;
+      }
+      100% { width: 100%;}
+}
+ */
+/******************** header ********************/
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 33px 30px 15px;
+	position: fixed;
+	box-sizing: border-box;
+	width: 100vw;
+	z-index: 50;
+	mix-blend-mode: difference;
+
+}
+
+.logo {
+	color: #fff;
+	margin-right: 90px;
+	position: relative;
+}
+.logo .dotlotPlayer{
+	position: absolute; 
+	top: -26px;
+    right: -87px;
+}
+
+.nav {
+	display: flex;
+	gap: 180px;
+
+}
+
+.nav li a {
+	color: #fff;
+	font-size: 20px;
+}
+
+.mv6 a {
+	color: #fff;
+	font-weight: bold;
+	font-size: 35px;
+	margin-right: 20px;
+}
+
+
+/******************** section1 ********************/
+.section1 {
+	height: 100vh;
+	padding-top: 80px;
+}
+
+.content {
+	width: 100vw;
+	position: relative;
+}
+
+.content--full {
+	padding: 0;
+}
+
+.content__title {
+	font-size: 11vw;
+	line-height: 1.3;
+	counter-increment: section;
+}
+
+
+.section1 .title {
+	color: #fff;
+	padding-left: 5%;
+	padding-top: 12%;
+	font-family: "Anton SC", sans-serif;
+	font-size: 10rem;
+	line-height: 23rem;
+	letter-spacing: 14px;
+	width: 90%;
+	height: 94%;
+	
+
+}
+
+.section1 .title .tit2 {
+	font-size: 130%;
+	
+}
+.section1 .splitting .char{opacity: 0;}
+
+.section1 .badge-parent {
+	z-index: 3;
+	width: 17rem;
+	height: 17rem;
+	color: #000;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+	top: 18%;
+	right: 8%;
+}
+
+.sec1{position: relative;}
+.sec1 iframe{position: absolute; left: 50%; top: 50%;
+transform: translate(-50%,-50%);
+}
+.sec1 iframe:after{
+	content: "";
+	position: absolute; left: 50%; top: 50%;
+transform: translate(-50%,-50%); width: 100%; height: 100%;
+background-color: red;
+pointer-events: none;
+z-index: 100;
+}
+
+.oj{position: initial !important;}
+
+/******************** introduce ********************/
+/* font-family: "Nanum Pen Script", cursive; */
+/* font-family: "IBM Plex Sans KR", sans-serif; */
+
+
+.introduce {
+	overflow: hidden;
+	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Anton SC", sans-serif;
+	letter-spacing: 1px;
+}
+
+.introduce .sec {
+	height: 100vh;
+	width: 100vw;
+	flex-shrink: 0;
+}
+
+.introduce .sec1 {
+	display: flex;
+	position: relative;
+}
+
+.introduce .sec2 {
+	transform: translate(5%);
+}
+
+.introduce .main-wrapper {
+	display: flex;
+}
+
+.introduce .sec3 {
+	background-color: black;
+	margin-top: -100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.box1 .dotlotPlayer{
+	position: absolute; 
+	top:0px;
+    left: 0px;
+}
+
+.introduce .box1 {
+	width: 65%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.introduce .box1 .imgwrap{
+	position: absolute;
+	
+}
+.introduce .box1 .intimg1{
+	position: absolute;
+	top: 0; right: 28%;
+	width: 30%;
+	height: 46%;
+}
+.introduce .box1 .intimg2{
+	position: absolute;
+	bottom: 0; left: -12%;
+	width: 45%;
+	height: 65%;
+}
+
+.introduce .box1 img{
+	width: 100%;
+	height: 100%;
+}
+
+.introduce .badge-parent1 {
+	z-index: 3;
+	width: 10rem;
+	height: 10rem;
+	color: #000;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+	top: 15%;
+	left: 5%;
+}
+.introduce .badge-parent2 {
+	z-index: 3;
+	width: 11rem;
+	height: 11rem;
+	color: #000;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+	bottom: 15%;
+	right: 42%;
+}
+
+.introduce .name {
+	font-size: 50px;}
+	
+.introduce .name span{
+	font-family: "Nanum Pen Script", cursive !important; 
+}
+
+
+.introduce .box2 {
+	width: 35%;
+}
+
+.introduce .image-gallery {
+	display: flex;
+	height: 100vh;
+}
+
+.introduce .col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.introduce .col img {
+	min-height: 300px;
+	height: auto;
+	width: 200px;
+	object-fit: cover;
+	background-color: black;
+}
+
+.introduce .col-1 img,
+.introduce .col-3 img {
+	padding: 0.2rem 0.5rem;
+}
+
+.introduce .col-2 img {
+	padding: 0.2rem 0;
+}
+
+.introduce .wrapper {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.introduce .left {
+	width: 65%;
+	padding: 0 0.8rem;
+	padding-left: 0;
+	padding-bottom: 0.5rem;
+	position: relative;
+}
+
+.introduce .left img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.introduce p {
+	font-size: 80px;
+}
+
+.introduce .num {
+	font-size: 40px;
+}
+
+.introduce .line-1 {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.introduce .line-2 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	gap: 20px;
+}
+
+.introduce .line-2 p {
+	font-size: 40px;
+
+}
+
+.introduce .num {
+	text-align: left;
+	width: 100%;
+}
+
+.introduce .line-2 p:nth-child(2) {
+	font-family: "Nanum Pen Script", cursive;
+
+}
+
+.introduce .loop {
+	height: 30px;
+	width: 120px;
+	white-space: nowrap;
+	overflow: hidden;
+	background: none;
+	border: 1px solid #444;
+	position: absolute;
+	top: 75%;
+	left: 80%;
+	cursor: pointer;
+}
+
+.introduce .loop span {
+	animation: loop 10s linear infinite;
+	display: inline-block;
+	padding-left: 110%;
+}
+
+.introduce .loop2 span {
+	animation-delay: 5s;
+}
+
+@keyframes loop {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+.expwrap {
+	margin-top: 20px;
+	position: absolute;
+	top: 70%;
+	left: 20%;
+	width: 100%;
+}
+
+.expwrap .experience_tit {
+	font-size: 230%;
+	font-weight: bold;
+}
+
+.expwrap .exparray {
+	display: flex;
+	gap: 1%;
+}
+
+.expwrap .exparray ul:nth-child(1) {
+	font-weight: bold;
+
+}
+
+.expwrap .exparray li {
+	line-height: 30px;
+	font-size: 100%;
+	font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+
+.introduce .right {
+	width: 35%;
+}
+
+.introduce .animate-text {
+	height: 120px;
+	background-color: black;
+	color: #fff;
+	font-size: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.introduce .animate-text span {
+	animation: loop 10s linear infinite;
+	display: inline-block;
+}
+
+.introduce .img-container {
+	width: 100%;
+	/* height: 780px; */
+	height: 90%;
+	padding: 0.5rem;
+	background-color: black;
+}
+
+.introduce .img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.introduce .rows {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	gap: 0.5rem;
+}
+
+.introduce .row {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+	height: 33.33%;
+	color: #fff;
+}
+
+.introduce .row-2 {
+	background-color: #fff;
+	color: black;
+}
+
+.introduce .row li {
+	font-size: 220px;
+	transform: translateX(50%);
+}
+
+
+.introduce .des {
+	font-size: 10px;
+	width: 200px;
+	text-transform: uppercase;
+	margin-bottom: 5rem;
+}
+
+/******************** section2 ********************/
+/* font-family: "Black Han Sans", sans-serif; */
+
+.section2 {
+	padding-top: 40vh;
+	position: relative;
+	height: 570vh;
+}
+
+.section2 .bgtxt {
+	font-size: 35rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-weight: 300;
+	position: sticky;
+	top: 100px;
+}
+
+.weblist {
+	width: 90vw;
+	position: absolute;
+	top: 10rem;
+	left: 5rem;
+	margin-top: 50rem;
+}
+
+.weblist .list {
+	width: 50%;
+	border-radius: 5px;
+}
+
+.list .img {
+	width: 100%;
+	height: 450px;
+	border-radius: 10px;
+	border-bottom-left-radius: 40px;
+	border-top-right-radius: 40px;
+	background-size: cover;
+	background-position: top;
+	transition: 0.8s
+}
+
+.list .img1,
+.img2 {
+	transition: 3s
+}
+
+.list:hover .img {
+	background-position: bottom;
+}
+
+.list .img1 {
+	background: url(./img/sec2/flip.png) no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.list .img2 {
+	background: url(./img/sec2/magma.png) no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.list .img3 {
+	background: url(./img/sec2/Musign.png) no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.list .img4 {
+	background: url(./img/sec2/sushi.png) no-repeat;
+	background-size: cover;
+	background-position: top;
+	transition: 1s
+}
+
+.list .img5 {
+	background: url(./img/sec2/responsive.png) no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.list .img6 {
+	background: url(./img/sec2/hanacard.png) no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+
+.list .txtbox {
+	color: #fff;
+	padding: 1rem 0;
+
+
+}
+
+.txtbox .titarr {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.txtbox .titxt {
+	padding-bottom: 2px;
+	font-size: 2rem;
+	letter-spacing: 8px;
+	font-weight: bold;
+	transition: 0.8s;
+	/* 안먹는것 같다ㅜ */
+	box-sizing: border-box;
+}
+
+.list:hover .titxt {
+	border-bottom: 1px solid;
+	box-sizing: border-box;
+}
+
+.list6 .titxt {
+	font-family: "Black Han Sans", sans-serif;
+}
+
+.txtbox .subtxt {
+	font-family: "IBM Plex Sans KR", sans-serif;
+
+}
+
+.txtbox .cictxtbox {
+	display: flex;
+	gap: 2rem;
+}
+
+.cictxt {
+	border: 1px solid #fff;
+	border-radius: 20px;
+	padding: 5px 20px;
+	font-weight: bold;
+	transition: 0.8s;
+}
+
+.cictxt1:hover {
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: black;
+}
+
+.cictxt2:hover {
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: black;
+}
+
+.cictxt3:hover {
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: black;
+}
+
+.subtxt {
+	margin-top: 5px;
+	font-weight: 500;
+	color: #a8a8a8
+}
+
+.weblist .list1 {
+	position: absolute;
+	top: 0rem;
+	left: 0;
+}
+
+.weblist .list3 {
+	position: absolute;
+	top: 100rem;
+	left: 0;
+}
+
+.weblist .list5 {
+	position: absolute;
+	top: 200rem;
+	left: 0;
+}
+
+.weblist .list2 {
+	position: absolute;
+	top: 50rem;
+	right: 0;
+
+}
+
+.weblist .list4 {
+	position: absolute;
+	top: 150rem;
+	right: 0;
+
+}
+
+.weblist .list6 {
+	position: absolute;
+	top: 250rem;
+	right: 0;
+
+}
+
+
+.splitting .char {
+    position: relative;
+	display: inline-block;
+}
+
+
+/******************** dec1 section ********************/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
+
+
+
+#main {
+	width: 100%;
+	min-height: 140vh;
+	background-color: #000;
+	font-family: 'Merriweather', serif;
+	overflow: hidden;
+}
+
+.part-1,
+.part-3 {
+	width: 100%;
+	height: 60vh;
+}
+
+.part-2 {
+	width: 100%;
+	height: 100vh;
+}
+
+.strip {
+	width: 300%;
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.strip:nth-child(2n) {
+	margin-left: -50%;
+}
+
+.part-2 h1 {
+	color: #fff;
+	font-size: 12vw;
+	display: flex;
+	line-height: 24vh;
+}
+
+.part-2 h1 span {
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+}
+
+
+
+/******************** section3 ********************/
+.section3 {
+	position: relative;
+	height: 100vh;
+}
+
+/* slider */
+
+
+.section3 .slider {
+	height: 100vh;
+}
+
+.section3 h1 {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translate(0, -50%);
+	color: black;
+	font-size: 40rem;
+	font-weight: normal;
+	letter-spacing: 50px;
+
+}
+
+
+.slider-main {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 500vw;
+	box-sizing: border-box;
+	height: 100%;
+
+}
+
+.slider-inner {
+	position: absolute;
+	left: 25rem;
+	top: 17vh;
+	width: 100%;
+	height: 75vh;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 10rem;
+}
+
+.slider-inner .img.even {
+	align-self: flex-end;
+}
+
+.slider-main .img {
+	transition: all 0.3s ease-in-out;
+	/* width: 700px;
+		height: 350px; */
+	width: 9%;
+	height: 60%;
+	padding-top: 20px;
+	background-size: cover;
+	/* border: rgba(0, 0, 0, 0.3) 0.5px solid; */
+}
+
+.slider-inner .img:nth-child(1) {
+	background-image: url(./img/sec3/book1.jpg);
+}
+
+.slider-inner .img:nth-child(2) {
+	background-image: url(./img/sec3/book2.jpg);
+}
+
+.slider-inner .img:nth-child(3) {
+	background-image: url(./img/sec3/book3.jpg);
+}
+
+.slider-inner .img:nth-child(4) {
+	background-image: url(./img/sec3/book4.jpg);
+}
+
+.slider-inner .img:nth-child(5) {
+	background-image: url(./img/sec3/book5.jpg);
+}
+
+.slider-inner .img:nth-child(6) {
+	background-image: url(./img/sec3/book6.jpg);
+}
+
+.slider-inner .img:nth-child(7) {
+	background-image: url(./img/sec3/book7.jpg);
+}
+
+.section3 .circlewrap {
+	position: relative;
+	height: 100vh;
+	/*  overflow: hidden; */
+}
+
+.section3 .circle {
+	z-index: -1;
+	position: absolute;
+	/* width: 2500px;
+		height: 2500px; */
+	width: 200%;
+	height: 200%;
+	border-radius: 50%;
+	background-color: #fff;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+
+
+
+/******************** section4  ********************/
+.section4 {
+	position: relative;
+	/* padding-top: 10vh; */
+	height: auto;
+	overflow: hidden;
+	height: 900vh;
+}
+
+
+
+/* cardwrap*/
+:root {
+	--pr-color: #da3417;
+	--second-color: #efe8e8;
+	--cubicbz: cubic-bezier(.9, 0, .1, 1);
+	--index: 35px;
+	--fz-big: 70px;
+}
+
+/* card */
+
+.section-card {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: var(--index);
+	padding-bottom: 80px;
+	padding-top: 250px;
+	z-index: 2;
+}
+
+.cards {
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+.cards_item {
+	width: 100%;
+	height: 100vh;
+	perspective: 500px;
+	margin-bottom: 50px;
+}
+
+.cards_item:last-child {
+	margin-bottom: 0;
+}
+
+.cards_el {
+	width: 100%;
+	height: 70vh;
+	overflow: hidden;
+}
+
+.cards_el-wrapp {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 70vh;
+	gap: 45px;
+	padding: 30px;
+	border-radius: 20px;
+	background: #ffffff1a;
+	backdrop-filter: blur(10px);
+	will-change: blur;
+}
+
+.fst {
+	background: url(./img/sec4/pam01.jpg) no-repeat center center;
+	background-size: cover;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.cardleft {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.cards_img {
+	width: 100%;
+	height: 60%;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.cards_img img {
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	object-fit: cover;
+}
+
+.cards_img.camig1 img {
+	left: -10px;
+	top: 0;
+	width: 120%;
+	height: 100%;
+}
+
+.cards_img.camig2 img {
+	left: -10%;
+	top: -10%;
+	width: 110%;
+	height: 110%;
+}
+
+.cards_txt {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 1rem;
+}
+
+.cards_el-title {
+	font-weight: bold;
+	margin: 14px 30px 10px;
+	font-size: 270%;
+	color: #242126;
+	font-family: "Do Hyeon", sans-serif;
+
+}
+
+.cards_el-p {
+	color: gray;
+	font-size: 25px;
+
+}
+
+.work-img {
+	width: 75%;
+	height: 100%;
+	/* background-color: skyblue; */
+
+}
+
+.work-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.end-anim {
+	height: 1px;
+	margin-top: 50px;
+}
+
+/* secdec */
+
+
+
+/******************** dec2 section ********************/
+.dec2 {
+	width: 100vw;
+	height: 180vh;
+	background: black;
+	color: white;
+}
+
+.dec2 svg {
+	/* max-width: 600px; */
+	overflow: visible;
+	margin-top: 55vh;
+	width: 95vw
+}
+
+.dec2 .ball {
+	fill: white;
+	visibility: hidden;
+
+}
+
+.dec2 .theLine {
+	fill: none;
+	stroke: white;
+	stroke-width: 3px;
+}
+
+.dec2 text {
+	fill: white;
+	font-size: 40px;
+	visibility: hidden;
+}
+
+
+
+
+
+/******************** section5  ********************/
+.titlwrap {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section5 .container {
+	padding: 6% 6% 0;
+	height: 80%;
+}
+
+.title {
+	font-size: 5rem;
+	letter-spacing: 5px;
+}
+
+.suptitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: gray;
+	font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+}
+
+.videowrap {
+	padding: 2% 1% 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	justify-items: center;
+	align-items: stretch;
+	height: 100%;
+	grid-template-columns: 100%, 100%;
+}
+
+.videowrap video {
+	width: 95%;
+	/* height: 100%; */
+}
+
+/* .videowrap iframe {
+	width: 95%;
+	height: 100%; 
+} */
+
+.videowrap.snep {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 7rem;
+	padding-top: 5rem;
+
+}
+
+/* .snep iframe {
+	width: 45%;
+	height: 40%;
+} */
+
+/* slick */
+.section5 .slick-dots {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -110px;
+	display: flex;
+}
+
+.section5 .slick-dots li {
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: 300ms;
+}
+
+.section5 .slick-dots li.slick-active {
+	width: 20px;
+	border-radius: 5px;
+}
+
+.section5 .slick-dots li button {
+	font-size: 0;
+	visibility: hidden;
+	/* 존재는 하나 눈에 보이지 않음(공간이 사라지는것이 아닌 안보이게하는 방법) 또는 투명도를 0 */
+}
+
+
+.section5 .slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	/* Y를 붙임으로 Y축값만 입력가능 */
+	z-index: 100;
+}
+
+.section5 .slick-prev {
+	left: 0;
+	visibility: hidden;
+}
+
+.section5 .slick-prev::after {
+	content: "\f053";
+	font-family: "Font Awesome 5 free";
+	font-weight: 700;
+	font-size: 50px;
+	color: #fff;
+	visibility: visible;
+	position: absolute;
+	left: 50px;
+	top: 90px;
+}
+
+.section5 .slick-next {
+	right: 0;
+	visibility: hidden;
+}
+
+.section5 .slick-next::after {
+	content: "\f054";
+	font-family: "Font Awesome 5 free";
+	font-weight: 700;
+	font-size: 50px;
+	color: #fff;
+	visibility: visible;
+	position: absolute;
+	right: 50px;
+	top: 90px;
+}
+
+
+
+
+/******************** section6 ********************/
+
+/* 변수만들기 */
+:root {
+	--index: calc(1vw + 1vh);
+	/* 빈공간의 넓이(변동하는 간격) : 화면 넓이의 1%*/
+	--transition: cubic-bezier(0.01, 0.93, 0.14, 0.99);
+}
+
+/* **계산기 안의 공간에는 + 부호 양옆으로 잘 띄워야 한다 */
+.section6 {
+	height: 100vh;
+	padding: 7rem 6rem 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.section6 .titlwrap {
+	z-index: 4;
+	/* 안나옴 */
+}
+
+.section6 .video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+}
+
+.section6 .video-container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.section6 .video-container video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.section6 .wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 9rem;
+}
+
+.section6 .items {
+	display: flex;
+	gap: 0.4rem;
+	perspective: calc(var(--index)*35);
+}
+
+/* 1rem = 16px 0.4rem= 16px*40% */
+.section6 .item {
+	width: calc(var(--index)*3);
+	height: calc(var(--index)*12);
+	background-size: cover;
+	transform-style: preserve-3d;
+	background-color: #222;
+	background-position: center;
+	cursor: pointer;
+	filter: grayscale(1) brightness(0.5);
+	transition: transform 1.25s var(--transition)
+		/* 0.3s = all 0.3s, 시간을 두개 쓰면 뒤에는 딜레이값 */
+		, filter 3s var(--transition), width 1.25s var(--transition)
+}
+
+.section6 .item:hover {
+	/* transform: translateZ(50px); => 부모에 perspective(원근감)이 있어야 활성화 된다 */
+	transform: translateZ(100px);
+	filter: grayscale(0) brightness(1);
+}
+
+.section6 .item::before,
+/* 콤마는 이거 하고라는 뜻 */
+.section6 .item::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	right: calc(var(--index)*-1);
+}
+
+.section6 .item::after {
+	left: calc(var(--index) * -1)
+}
+
+.section6 .item:hover {
+	transform: translateZ(calc(var(--index) * 10));
+	filter: grayscale(0) brightness(1);
+}
+
+/* 
+ hover의 오른쪽 */
+.section6 .item:hover+* {
+	/* //바로밑 동생 */
+	transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+	filter: grayscale(0) brightness(1);
+	z-index: -1;
+}
+
+.section6 .item:hover+*+* {
+	transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+	filter: grayscale(0) brightness(1);
+	z-index: -2;
+}
+
+.section6 .item:hover+*+*+* {
+	transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+	filter: grayscale(0) brightness(1);
+	z-index: -3;
+}
+
+.section6 .item:hover+*+*+*+* {
+	transform: translateZ(calc(var(--index) * 0.6)) rotateY(15deg);
+	filter: grayscale(0) brightness(1);
+	z-index: -4;
+}
+
+/* hover의 왼쪽 */
+.section6 .item:has(+ :hover) {
+	transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+	filter: grayscale(0) brightness(1);
+}
+
+.section6 .item:has(+ * + :hover) {
+	transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+	filter: grayscale(0) brightness(1);
+}
+
+.section6 .item:has(+ * + * + :hover) {
+	transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+	filter: grayscale(0) brightness(1);
+}
+
+.section6 .item:has(+ * + * + * + :hover) {
+	transform: translateZ(calc(var(--index) * 0.6)) rotateY(-15deg);
+	filter: grayscale(0) brightness(1);
+}
+
+/* :active ==> 활성상태인 요소  마우스를 올리고 있는 동안을 의미한다.*/
+.section6 .item:active {
+	width: 28vw;
+	filter: grayscale(0) brightness(1);
+	z-index: 100;
+	transform: translateZ(calc(var(--index) * 10));
+	margin: 0 0.45vw;
+
+}
+
+
+/******************** section7 ********************/
+/* font-family: "Orbit", sans-serif; */
+.section7 {
+	position: relative;
+	height: 100vh;
+	color: #fff;
+	padding: 6% 3% 0 3%;
+}
+
+.secarray {
+	height: 72%;
+	display: flex;
+}
+
+.leftwrap {
+	width: 50%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.dot5{
+	position: absolute;
+	top: 30%;
+	right: 13%;
+
+}
+
+.titleme {
+	margin-left: 2%;
+	width: 100%;
+	height: 15%;
+	font-size: 800%;
+	letter-spacing: 10px;
+
+}
+
+.svgWrap{
+	position: absolute; top: 0; right:40px;
+}
+
+.my{
+	padding-top: 10%;
+	font-size: 150%;
+	display: flex;
+	gap: 2%;
+	width: 100%;
+}
+.my ul:nth-child(2) li{font-family: "Orbit", sans-serif;}
+.my ul:nth-child(1) li{letter-spacing: 3px;}
+.my li{ line-height: 60px;}
+
+.mypicarr{
+	padding-top: 12%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	gap: 40px;
+}
+/* img */
+.picwrap {
+	height: 75%;
+	width: 50%;
+	margin-left: 4%;
+}
+
+.picwrap .pic {
+	perspective: 600px;
+	width: 100%;
+	height: 100%;
+}
+
+/* .picwrap .front {
+	background: url(./img/sec7/1.jpg) center;
+	position: relative;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	border-radius: 15px;
+}
+
+.picwrap .back {
+	background: url(./img/sec7/2.jpg) center;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transform: rotateY(-180deg);
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	border-radius: 15px;
+}
+
+.pic:hover .front {
+	transform: rotateY(180deg);
+}
+
+.pic:hover .back {
+	transform: rotateY(0deg);
+	z-index: 2;
+} */
+
+
+
+.rightwrap {
+	width: 50%;
+	position: relative;
+}
+
+.dot4{
+	position: absolute;
+	top:53%;
+	right: 0;
+transform: rotate(-20deg);
+}
+
+
+/* certificate */
+.certwrap {
+	margin-top: 28%;
+}
+
+.certwrap .certificate_tit {
+	font-size: 300%;
+	font-weight: bold;
+}
+
+.certwrap .certarray {
+	display: flex;
+	gap: 10%;
+	font-size: 130%;
+	margin-top: 10px;
+}
+
+.certwrap .certarray ul:nth-child(1) {
+	font-weight: bold;
+}
+
+.certwrap .certarray li {
+	line-height: 50px;
+	font-size: 100%;
+	font-family: "Orbit", sans-serif;
+}
+
+
+/* carousel */
+.carousel {
+    overflow: hidden;
+    position: relative;
+	padding-top: 6%;
+}
+
+.carousel .left_carousel {
+    background: yellow;
+    background: linear-gradient(90deg, black, transparent);
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.carousel .right_carousel {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(270deg, black, transparent);
+}
+
+.carousel .carousel_inner {
+    display: flex;
+    width: 200%;
+    animation: marque 10s linear infinite;
+}
+
+.carousel .carousel_inner:hover {
+    animation-play-state: paused
+}
+
+.carousel .carousel_inner .item {
+    width: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .carousel_inner .item img {
+    width: 60%;
+}
+
+.carousel .carousel_inner .item:nth-child(4) img {
+    width: 40%;
+}
+.carousel .carousel_inner .item:nth-child(5) img {
+    width: 40%;
+}
+.carousel .carousel_inner .item:nth-child(6) img {
+    width: 40%;
+}
+
+.carousel .carousel_inner .item:nth-child(10) img {
+    width: 40%;
+}
+.carousel .carousel_inner .item:nth-child(11) img {
+    width: 40%;
+}
+.carousel .carousel_inner .item:nth-child(12) img {
+    width: 40%;
+}
+
+
+@keyframes marque {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* 내 몸의 반만큼 앞으로 땡긴다 */
+}
+
+
+
+
+
+/******************** section8 ********************/
+.wrap .section8 {
+	height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************** mouse ********************/
